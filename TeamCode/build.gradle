@@ -25,7 +25,7 @@ android {
 repositories{
 }
 dependencies {
-    implementation 'com.github.DaCodingBeast:pso4pids:1.1.5'
+    implementation 'com.github.DaCodingBeast:pso4pids:1.1.6'
     implementation "com.acmerobotics.dashboard:dashboard:0.4.16"
     implementation project(':FtcRobotController')
     testImplementation 'junit:junit:4.12'

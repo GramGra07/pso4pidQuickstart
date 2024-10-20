@@ -27,11 +27,10 @@ public class Constants {
     public final String motorName = "shoulder";
 
 
-
     //todo provide the angles (in radians) that your arm can run to when testing (larger range the better)
-    public final AngleRange testingAngle = new AngleRange(0.0, PI);
+    public final AngleRange testingAngle = new AngleRange(0.0, PI/2);
     //todo provide angles (in radians) that present as obstacles to the system. If none set to null
-    public final AngleRange obstacle = new AngleRange(-0.1 * PI, -0.3 * PI); // = null
+    public final AngleRange obstacle = new AngleRange(-0.1 * PI, -0.3 * PI); // = null;
 
 
     //TESTING
@@ -60,11 +59,12 @@ public class Constants {
     //todo LAST STEP - RUN the test in the TEST MODULE -> TeamCode/src/test/java/org.firstinspires.ftc.teamcode/FindConstants.java
 
     public static ArrayList<PIDFParams> params = new ArrayList<>(Arrays.asList(
-            new PIDFParams(2.285019340839641, 0.4386279973226315, 0.30841127892035985, 0.14487563709714993),
-            new PIDFParams(3.569998446313589, 0.8152903499711774, 0.41822071381802867, 1.2682980274992102),
-            new PIDFParams(3.017739632654526, 0.7573771973745118, 0.3547940131426662, 0.5146750002011186),
-            new PIDFParams(3.075062305773028, 0.14718362175735816, 0.32082493355821445, 0.8737486665205733)
+            new PIDFParams(1.8446998254838274, 0.645459144659821, 0.27580131796119006, 0.08410433897243955),
+            new PIDFParams(2.1017055627786365, 1.5581383742794008, 0.39075904279895557, 2.1556704344429276),
+            new PIDFParams(2.272228025466264, 1.2239629034613366, 0.3078717768561709, 0.6871836151631764),
+            new PIDFParams(3.7913956820669483, 0.02323118751542631, 0.3877392787120557, 0.31197681044323883)
     ));
+
 
 
     SystemConstants constant = new SystemConstants(
