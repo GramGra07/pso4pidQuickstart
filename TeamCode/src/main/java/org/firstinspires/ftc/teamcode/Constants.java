@@ -28,7 +28,8 @@ public class Constants {
 
 
     //todo provide the angles (in radians) that your arm can run to when testing (larger range the better)
-    public final AngleRange testingAngle = new AngleRange(0.0, PI/2);
+    static double stationaryAngle = Math.toRadians(3.0);
+    public final AngleRange testingAngle = new AngleRange(stationaryAngle, PI/2);
     //todo provide angles (in radians) that present as obstacles to the system. If none set to null
     public final AngleRange obstacle = new AngleRange(-0.1 * PI, -0.3 * PI); // = null;
 
@@ -45,9 +46,6 @@ public class Constants {
     public static double gravityB = 1.59221;
     public static double gravityK = 21.6828;
 
-    //todo name the angles you want your arm to run to (The simulator will generate PIDF coefficients for each)
-
-    static double stationaryAngle = Math.toRadians(3.0);
 
     public static final ArrayList<AngleRange> angleRanges = new ArrayList<AngleRange>() {{
         add(new AngleRange(stationaryAngle, PI*.5));

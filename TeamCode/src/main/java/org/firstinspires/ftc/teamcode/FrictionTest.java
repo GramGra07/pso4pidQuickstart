@@ -66,10 +66,10 @@ public class FrictionTest extends LinearOpMode {
             if (rpm >= theoreticalRpmMeasured * 0.5 && rpm <= theoreticalRpmMeasured * 1.5) {
                 RPMS.add(rpm);
             }
-
+            else telemetry.addLine("Rpm Constants is incorrect, or your robot is struggling with the amount of weight it has");
+            double sum = 0;
             // Make sure size is not returning something other than 0
             if (!RPMS.isEmpty()) {
-                double sum = 0;
                 for (double num : RPMS) sum += num* 2;
                 telemetry.addData("Motor RPM", sum / RPMS.size());
             }
@@ -78,7 +78,7 @@ public class FrictionTest extends LinearOpMode {
             if (timer.seconds() != 0.0) {
                 angularVelocity = (angle - lastAngle) / timer.seconds();
                 angularAccel = abs((angularVelocity - lastVelocity) / timer.seconds());
-                if (motor.getPower() != 0.0 && angle < constants.testingAngle.getTarget()) {
+                if (motor.getPower() != 0.0) {
                     angularAccelerationData.add(angularAccel);
                     motorPowers.add(motor.getPower());
                 }
@@ -95,20 +95,20 @@ public class FrictionTest extends LinearOpMode {
                     double rotationalInertia = Models.calculateTmotor(
                             angularAccelerationData.get(i),
                             constants.motor,
-                            RPMS.stream().mapToDouble(Double::doubleValue).average().orElse(0.0) * 2
+                            sum / RPMS.size()
                     ) / motorPowers.get(i);
-                    if (rotationalInertia >= 0.0 && rotationalInertia <= 10.0) {
+                    if (rotationalInertia >= 0.0) {
                         rotationalInertias.add(rotationalInertia);
                     }
                 }
 
-                double sum = 0;
+                double sum2 = 0;
                 rotationalInertias = RemoveOutliers.removeOutliers(rotationalInertias);
-                for (double num : rotationalInertias) sum += num;
+                for (double num : rotationalInertias) sum2 += num;
 
                 telemetry.addData(
                         "Rotational Inertia: (Add to config)",
-                        sum/rotationalInertias.size()
+                        sum2/rotationalInertias.size()
                 );
             }
 
