@@ -52,6 +52,7 @@ public class FrictionTest extends LinearOpMode {
 
             // Running motor at half speed
             double angle = armAngle.findAngle(motor.getCurrentPosition());
+            //todo double angle = get voltage and convert to Radians if using an absolute encoder
 
             // Run motor
             motor.setPower(
