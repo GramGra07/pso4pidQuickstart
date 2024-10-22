@@ -1,20 +1,3 @@
-pluginManagement {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        mavenCentral()
-        google()
-        maven { url 'https://jitpack.io' }
-        maven { url 'https://maven.brott.dev/' }
-    }
-}
-
 rootProject.name = "pso4pidQuickstart"
 include ':FtcRobotController'
 include ':TeamCode'

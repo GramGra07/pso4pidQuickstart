@@ -22,8 +22,6 @@ android {
         jniLibs.useLegacyPackaging true
     }
 }
-repositories{
-}
 dependencies {
     implementation 'com.github.DaCodingBeast:pso4pids:1.2.0'
     implementation "com.acmerobotics.dashboard:dashboard:0.4.16"
