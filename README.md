@@ -12,6 +12,6 @@ Clone this repository and follow the tuning guide https://docs.google.com/docume
 3. Change gradle version to 7.5
 4. Inside the FTCRobotController module, under src/main, open AndroidManifest.xml, and add this ```
       tools:replace = "android:icon,android:theme"``` below ```android:usesCleartextTraffic="true"```
-5. In the build.common.gradle change ```compileSdkVersion 29``` to ```compileSdkVersion 3```4
+5. In the build.common.gradle change ```compileSdkVersion 29``` to ```compileSdkVersion 34```
 6. In Android Project view -> under .gradle -> wrapper -> gradle-wrapper.properties -> change distribution url to ```distributionUrl=https\://services.gradle.org/distributions/gradle-7.5-bin.zip```
 ## All set!
