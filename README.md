@@ -13,4 +13,4 @@ Clone this repository and follow the tuning guide https://docs.google.com/docume
       tools:replace = "android:icon,android:theme"``` below ```android:usesCleartextTraffic="true"```
 4. In the build.common.gradle change ```compileSdkVersion 29``` to ```compileSdkVersion 3```4
 
-##All set!
+## All set!
