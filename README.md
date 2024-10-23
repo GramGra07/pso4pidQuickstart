@@ -1,4 +1,4 @@
-## Auto Tuning Pid Controllers
+# Auto Tuning Pid Controllers
 
 ### Reccommended Setup
 Clone this repository and follow the tuning guide https://docs.google.com/document/d/1bymQrM0Fjh6iF8rk0LOnRxAvZ4Z7ZZ_rhb6DtUqgZno/edit?usp=sharing
