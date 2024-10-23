@@ -12,4 +12,5 @@ Clone this repository and follow the tuning guide https://docs.google.com/docume
 3. Inside the FTCRobotController module, under src/main, open AndroidManifest.xml, and add this ```
       tools:replace = "android:icon,android:theme"``` below ```android:usesCleartextTraffic="true"```
 4. In the build.common.gradle change ```compileSdkVersion 29``` to ```compileSdkVersion 3```4
-All set!
+
+##All set!
