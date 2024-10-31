@@ -28,7 +28,7 @@ public class Constants {
 
 
     //todo provide the angles (in radians) that your arm can run to when testing (larger range the better)
-    static double stationaryAngle = Math.toRadians(3.0);
+    public static double stationaryAngle = Math.toRadians(3.0);
     public final AngleRange testingAngle = new AngleRange(stationaryAngle, PI/2);
     //todo provide angles (in radians) that present as obstacles to the system. If none set to null
     public final AngleRange obstacle = new AngleRange(-0.1 * PI, -0.3 * PI); // = null;
