@@ -22,16 +22,16 @@ public class Constants {
     //CONFIGURATIONS - do before running anything
 
     //todo Assign Your Motor Specs, direction, and CONFIG Name
-    public final Hardware.Motor motor = Hardware.YellowJacket.RPM84; // for geared motors new Hardware.Motor(RPM,EncTicksPerRev,StallTorque,GearRatio);
-    public final DcMotorSimple.Direction motorDirection = DcMotorSimple.Direction.REVERSE;
-    public final String motorName = "shoulder";
+    public final Hardware.Motor motor = new Hardware.Motor(223.0,8192.0,38.0,1.0/141.225); // for geared motors new Hardware.Motor(RPM,EncTicksPerRev,StallTorque,GearRatio);
+    public final DcMotorSimple.Direction motorDirection = DcMotorSimple.Direction.FORWARD;
+    public final String motorName = "pitchMotor";
 
 
     //todo provide the angles (in radians) that your arm can run to when testing (larger range the better)
-    public static double stationaryAngle = Math.toRadians(3.0);
-    public final AngleRange testingAngle = new AngleRange(stationaryAngle, PI/2);
+    public static double stationaryAngle = PI*.5;
+    public final AngleRange testingAngle = new AngleRange(stationaryAngle, PI);
     //todo provide angles (in radians) that present as obstacles to the system. If none set to null
-    public final AngleRange obstacle = new AngleRange(-0.1 * PI, -0.3 * PI); // = null;
+    public final AngleRange obstacle = null;
 
 
     //TESTING
@@ -48,10 +48,7 @@ public class Constants {
 
 
     public static final ArrayList<AngleRange> angleRanges = new ArrayList<AngleRange>() {{
-        add(new AngleRange(stationaryAngle, PI*.5));
-        add(new AngleRange(PI*.5, -PI*.9));
-        add(new AngleRange(-PI*.9, PI*.5));
-        add(new AngleRange(PI*.5, stationaryAngle));
+        add(new AngleRange(stationaryAngle, PI*.5));        add(new AngleRange(PI*.5, stationaryAngle));
     }};
 
     //todo LAST STEP - RUN the test in the TEST MODULE -> TeamCode/src/test/java/org.firstinspires.ftc.teamcode/FindConstants.java
