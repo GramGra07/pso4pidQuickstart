@@ -8,6 +8,7 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import ArmSpecific.ArmAngle;
 import ArmSpecific.GravityModelConstants;
 import ArmSpecific.Hardware;
 import ArmSpecific.SystemConstants;
@@ -79,4 +80,5 @@ public class Constants {
             Math.toRadians(3.0)
     );
 
+    public ArmAngle armAngle = new ArmAngle(motor,stationaryAngle);
 }
